@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Missile Command: Missile Command</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Missile Command
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li class="current"><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definizioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pagine</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Missile Command </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="presgioco"></a>
+Il gioco</h1>
+<p>Questo software è una semplice riproduzione del classico videogame "Missile Command" per Atari 2600. Il giocatore controlla tre basi sul fondo del display, ognuna costituita da 8 torri, e con esse deve difendere le città circostanti dai missili nemici provenienti dalla parte superiore del display.</p>
+<p>Cliccando sullo schermo il giocatore può lanciare un missile dalla base più vicina, "consumando" una torre. Una volta raggiunto l'obiettivo il missile causerà una piccola esplosione per un breve periodo. Se durante questo tempo almeno un missile nemico entra in contatto con essa, il missile viene eliminato, vengono assegnati dei punti al giocatore, e viene assegnata una torre bonus.</p>
+<p>Nel caso in cui un missile nemico riesca a raggiungere una città, quest'ultima viene distrutta. Perdere tutte e 6 le città porta, ovviamente, al game over. I missili nemici possono inoltre colpire le basi del giocatore, che in tal caso perdono 2 torri.</p>
+<h1><a class="anchor" id="prescodice"></a>
+Il codice</h1>
+<p>Questo software si appoggia sulla libreria Allegro (versione 5.0) e sugli addon font, ttf, image e primitives. Il cursore, i missili e le esplosioni sono disegnate interamente dalle funzioni "primitives", mentre lo sfondo, le torri e le città sono file .bmp caricati durante l'inizializzazione. Gli addon font e ttf sono necessari per caricare la riproduzione del font Atari originale per il menu iniziale, per la schermata di game over, e per il contatore del punteggio.</p>
+<p>Il codice è suddiviso in 4 file sorgente con 2 header.</p>
+<p><a class="el" href="main_8cc.html">main.cc</a> : File principale, inizializza le varie funzionalità di allegro, gestisce le fasi speciali di intro / game over, e contiene la base del loop principale, che a sua volta andrà a chiamare funzioni in altri file. Per il tracing in questo file è stata usata la macro DEBUG_MAIN.</p>
+<p><a class="el" href="main__header_8h.html">main_header.h</a> : Header principale incluso in tutti e 4 i file sorgente. Contiene le definizioni delle variabili comuni a tutti i file, degli struct e la dichiarazione della maggior parte delle funzioni.</p>
+<p><a class="el" href="missiles__logic_8cc.html">missiles_logic.cc</a> : File contenente tutte le funzioni che riguardano i missili, la loro inizializzazione, le funzioni che ne regolano la traiettoria e le esplosioni. Per il tracing in questo file è stata usata la macro DEBUG_MIS.</p>
+<p><a class="el" href="drawing_8cc.html">drawing.cc</a> : Contiene le funzioni che ad ogni ciclo del programma disegnano sul display città e torri rimanenti, ed il cursore. Per il tracing in questo file è stata usata la macro DEBUG_DRAW.</p>
+<p><a class="el" href="drawing_8h.html">drawing.h</a> : Header contenente alcune dichiarazioni, incluso solo da <a class="el" href="drawing_8cc.html">drawing.cc</a>.</p>
+<p><a class="el" href="cleanup_8cc.html">cleanup.cc</a> : File contenente una singola funzione di "pulizia", chiamata nel caso in cui il giocatore decida di ricominciare la partita dopo un eventuale game over senza riavviare il software. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato Sab 14 Giu 2014 20:21:24 per Missile Command da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
