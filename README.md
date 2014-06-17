@@ -1,4 +1,4 @@
-MissileCommand
+Missile Command
 ==============
 
 Questo software è una semplice riproduzione del classico videogame "Missile Command" per Atari 2600.
