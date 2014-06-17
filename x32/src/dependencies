@@ -1,0 +1,4 @@
+cleanup.o: cleanup.cc main_header.h
+drawing.o: drawing.cc main_header.h drawing.h
+main.o: main.cc main_header.h drawing.h
+missiles_logic.o: missiles_logic.cc main_header.h
